@@ -1,0 +1,6 @@
+*.class
+*.png
+*.xml
+.idea
+*.puml
+*.iml
