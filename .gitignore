@@ -1,6 +1,6 @@
 *.class
 *.png
-*.xml
-.idea
 *.puml
+hs_err_pid*
+.idea
 *.iml
