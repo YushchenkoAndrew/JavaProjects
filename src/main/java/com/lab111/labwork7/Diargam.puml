@@ -1,0 +1,69 @@
+@startuml
+interface Flyweight
+Flyweight : draw()
+Flyweight : setDraw()
+Flyweight : Memento getMemento()
+FlyweightFactory : getFlyweight()
+FlyweightFactory : flyweightMap
+Pixel : draw()
+Pixel : setDraw()
+Pixel : draw
+Draw : drawPixel()
+Draw : drawLine()
+Draw : drawOval()
+Draw : drawRectangle()
+Draw : drawTriangle()
+
+interface Memento
+Memento <-o Action
+Memento : setColor(Color color)
+Memento : Color getColor()
+Memento : setRectangle(Rectangle rectangle)
+Memento : Rectangle getRectangle()
+
+Memento <|-- MementoShape
+
+MementoShape : setColor(Color color)
+MementoShape : Color getColor()
+MementoShape : setRectangle(Rectangle rectangle)
+MementoShape : Rectangle getRectangle()
+
+Line ..> MementoShape
+Oval ..> MementoShape
+Triangle ..> MementoShape
+Rectangle ..> MementoShape
+
+Line : draw()
+Line : setDraw()
+Line : draw
+Line : Memento getMemento()
+
+Oval : draw()
+Oval : setDraw()
+Oval : draw
+Oval : Memento getMemento()
+
+Rectangle : draw()
+Rectangle : setDraw()
+Rectangle : draw
+Rectangle : Memento getMemento()
+
+Triangle : draw()
+Triangle : setDraw()
+Triangle : draw
+Triangle : Memento getMemento()
+
+FlyweightFactory o--> Flyweight
+Flyweight <|-- Pixel
+Flyweight <|-- Line
+Oval --|> Flyweight
+Flyweight <|- Rectangle
+Triangle -|> Flyweight
+
+Pixel --> Draw
+Oval --> Draw
+Line --> Draw
+Rectangle --> Draw
+Triangle --> Draw
+
+@enduml

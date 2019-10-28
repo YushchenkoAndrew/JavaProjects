@@ -1,0 +1,46 @@
+@startuml
+interface Flyweight
+Flyweight : draw()
+Flyweight : setDraw()
+FlyweightFactory : getFlyweight()
+FlyweightFactory : flyweightMap
+Pixel : draw()
+Pixel : setDraw()
+Pixel : draw
+Draw : drawPixel()
+Draw : drawLine()
+Draw : drawOval()
+Draw : drawRectangle()
+Draw : drawTriangle()
+
+
+Line : draw()
+Line : setDraw()
+Line : draw
+
+Oval : draw()
+Oval : setDraw()
+Oval : draw
+
+Rectangle : draw()
+Rectangle : setDraw()
+Rectangle : draw
+
+Triangle : draw()
+Triangle : setDraw()
+Triangle : draw
+
+FlyweightFactory o--> Flyweight
+Flyweight <|-- Pixel
+Flyweight <|-- Line
+Oval --|> Flyweight
+Flyweight <|- Rectangle
+Triangle -|> Flyweight
+
+Pixel --> Draw
+Oval --> Draw
+Line --> Draw
+Rectangle --> Draw
+Triangle --> Draw
+
+@enduml

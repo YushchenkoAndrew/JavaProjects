@@ -1,0 +1,22 @@
+@startuml
+interface Image
+Image : checkPixelColor()
+Image : setSize()
+
+Decorator --|> Image
+RealImage --|> Image
+Decorator o--> Image
+
+Decorator : checkPixelColor()
+Decorator : setSize()
+Decorator : component
+Decorator : Decorator()
+
+RealImage : checkPixelColor()
+RealImage : RealImage()
+RealImage : setSize()
+RealImage : load()
+RealImage : path;
+RealImage : label;
+RealImage : image;
+@enduml

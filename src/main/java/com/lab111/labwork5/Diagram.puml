@@ -1,0 +1,23 @@
+@startuml
+interface Subject
+interface Observer
+
+Subject : attach(Observer o)
+Subject : detach(Observer o)
+Subject : notify()
+
+Observer : update()
+
+Subject <|-- ConcreteSubject
+Subject -> Observer
+Observer <|-- ConcreteObserver
+ConcreteSubject <- ConcreteObserver
+
+ConcreteSubject : observers[]
+ConcreteSubject : attach(Observer o)
+ConcreteSubject : detach(Observer o)
+ConcreteSubject : notify()
+
+ConcreteObserver : object
+ConcreteObserver : update()
+@enduml
