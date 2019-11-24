@@ -65,8 +65,8 @@ public class FileReader extends FilesReaderWriter {
     }
 
     @Override
-    public void setPath(String path) {
-        super.setPath(path);
+    public void setReadFilePath(String path) {
+        super.setReadFilePath(path);
     }
 
     Action action;

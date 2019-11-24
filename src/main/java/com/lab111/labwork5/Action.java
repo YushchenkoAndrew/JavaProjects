@@ -35,7 +35,7 @@ public class Action extends article.ActionEvent.ActionEvent {
                 width = Integer.valueOf(gui.textFields[3].getText());
                 height = Integer.valueOf(gui.textFields[5].getText());
 
-                gui.label[1].setLabelBackground(new Color(image.checkPixelColor(1, 1)));
+                gui.label[1].setBackground(new Color(image.checkPixelColor(1, 1)));
                 break;
             }
             case 2: {
@@ -93,7 +93,7 @@ public class Action extends article.ActionEvent.ActionEvent {
     public void mousePressedMove() {
         if (MouseInfo.getPointerInfo().getLocation().x >= 460 && MouseInfo.getPointerInfo().getLocation().x <= width + 458 && MouseInfo.getPointerInfo().getLocation().y >= 82 && MouseInfo.getPointerInfo().getLocation().y <= height + 80) {
         Color color = new Color(image.checkPixelColor(MouseInfo.getPointerInfo().getLocation().x - 460, MouseInfo.getPointerInfo().getLocation().y - 80));
-        gui.label[1].setLabelBackground(color);
+        gui.label[1].setBackground(color);
 
         gui.textFields[6].setText("r:" + color.getRed() + ", g:" + color.getGreen() + ", b:" + color.getBlue());
 

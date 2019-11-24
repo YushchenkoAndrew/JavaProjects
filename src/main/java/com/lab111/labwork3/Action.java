@@ -1,13 +1,9 @@
 package main.java.com.lab111.labwork3;
 
 import article.GUI.GUI;
-import article.GUI.Label;
-import article.GUI.TextField;
 
 import javax.imageio.ImageIO;
-import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.io.File;
 
 public class Action extends article.ActionEvent.ActionEvent {
@@ -37,7 +33,7 @@ public class Action extends article.ActionEvent.ActionEvent {
                 width = Integer.valueOf(gui.textFields[3].getText());
                 height = Integer.valueOf(gui.textFields[5].getText());
 
-                gui.label[1].setLabelBackground(new Color(image.checkPixelColor(1, 1)));
+                gui.label[1].setBackground(new Color(image.checkPixelColor(1, 1)));
                 break;
             }
         }
@@ -46,7 +42,7 @@ public class Action extends article.ActionEvent.ActionEvent {
     public void mouseClicked() {
         if (MouseInfo.getPointerInfo().getLocation().x >= 460 && MouseInfo.getPointerInfo().getLocation().x <= width + 458 && MouseInfo.getPointerInfo().getLocation().y >= 82 && MouseInfo.getPointerInfo().getLocation().y <= height + 80) {
             Color color = new Color(image.checkPixelColor(MouseInfo.getPointerInfo().getLocation().x - 460, MouseInfo.getPointerInfo().getLocation().y - 80));
-            gui.label[1].setLabelBackground(color);
+            gui.label[1].setBackground(color);
 
             gui.textFields[6].setText("r:" + color.getRed() + ", g:" + color.getGreen() + ", b:" + color.getBlue());
 
