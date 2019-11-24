@@ -190,7 +190,7 @@ public class NeuralNetwork extends FilesReaderWriter {
 
     /**
      * Yep. I know that is messy method and it will be perhaps slowly saved data but
-     * IT'S SAVING, how cares how long does it take?
+     * IT'S SAVING, Who cares how long does it take?
      * Maybe... In the future I'll change it in more likable/pleasure format but how knows?
      * For Me in the past time is important when you saving weight while your neural network is learning
      */
