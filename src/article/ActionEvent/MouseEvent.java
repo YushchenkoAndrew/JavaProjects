@@ -31,8 +31,8 @@ public class MouseEvent {
                     action.mousePressed();
                 } catch (Exception ex) {
                     ErrorState.ErrorPopUp("Something went wrong with mouse Pressed!");
-//                System.err.println(ex.getMessage());
-//                System.err.println(ex.getCause().toString());
+//                System.err.println(ex.fillInStackTrace().toString());
+//                ex.notify();
                 }
             }
 

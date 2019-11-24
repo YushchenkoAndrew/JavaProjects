@@ -38,6 +38,18 @@ public class Label extends JLabel {
     }
 
 
+    public void setForeground(Color color) {
+        super.setForeground(color);
+        if(label != null)
+            label.setForeground(color);
+    }
+
+    @Override
+    public void setText(String text) {
+        super.setText(text);
+        if (label != null)
+            label.setText(text);
+    }
 
     @Override
     public boolean isFocusOwner(){
@@ -45,8 +57,10 @@ public class Label extends JLabel {
     }
 
 
-    public void setLabelBackground(Color color) {
-        label.setBackground(color);
+    public void setBackground(Color color) {
+        super.setBackground(color);
+        if(label != null)
+            label.setBackground(color);
     }
 
 }

@@ -147,7 +147,7 @@ public class GUI {
     }
 
 
-    public Label[] label = new Label[10];
+    public Label[] label = new Label[50];
 
     int indexLabel = 0;
 

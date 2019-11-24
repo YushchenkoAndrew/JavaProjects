@@ -41,7 +41,6 @@ public abstract class MainStructure {
      *
      * @param index describe in which GUI and Action this class need to send DATA
      */
-
     public void transfareData(int index) {
 
     }

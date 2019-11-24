@@ -33,6 +33,15 @@ public class Button extends JButton {
         return jButton;
     }
 
+    @Override
+    public void setText(String text) {
+        super.setText(text);
+        jButton.setText(text);
+    }
+
+    public void setRoundedBorder() {
+    }
+
     public void setIcon (Icon icon) {
         jButton.setIcon(icon);
     }
