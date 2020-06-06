@@ -12,7 +12,7 @@ public class Table extends JTable {
     private DefaultTableModel model;
     private DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
     String[] columns;
-    private int counter = 0;
+    public int counter = 0;
 
     public JTable createTable(Rectangle rectangle, String[] columns, boolean flag){
         table = new JTable();

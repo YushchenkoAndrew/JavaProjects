@@ -84,15 +84,19 @@ public final class Matrix {
     }
 
     public double[][] multiplication(double[][] A, double k) {
+        if (A == null || k == 0)
+            return null;
         double[][] C = new double[A.length][A[0].length];
 
         for (int i = 0; i < A.length; i++)
             for (int j = 0; j < A[0].length; j++)
-                    C[i][j] = A[i][j] * k;
+                C[i][j] = A[i][j] * k;
         return C;
     }
 
     public double[][] multiplication(double[][] A, double[][] B) {
+        if (A == null || B == null)
+            return null;
         double[][] C = new double[A.length][B[0].length];
 
         for (int i = 0; i < A.length; i++)
@@ -267,15 +271,15 @@ public final class Matrix {
         return C;
     }
 
-    public double[][] routetionMatrixOZ(double degree) {
+    public double[][] rotationMatrixOZ(double degree) {
         return new double[][]{{Math.cos(degree), -Math.sin(degree), 0}, {Math.sin(degree), Math.cos(degree), 0}, {0, 0, 1}};
     }
 
-    public double[][] routetionMatrixOX(double degree) {
+    public double[][] rotationMatrixOX(double degree) {
         return new double[][]{{1, 0, 0}, {0, Math.cos(degree), -Math.sin(degree)}, {0, Math.sin(degree), Math.cos(degree)}};
     }
 
-    public double[][] routetionMatrixOY(double degree) {
+    public double[][] rotationMatrixOY(double degree) {
         return new double[][]{{Math.cos(degree), 0, Math.sin(degree)}, {0, 1, 0}, {-Math.sin(degree), 0, Math.cos(degree)}};
     }
 }

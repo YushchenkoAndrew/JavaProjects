@@ -3,12 +3,11 @@ package article.ActionEvent;
 import article.ErrorState;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseListener;
 
 public class MouseEvent {
-
     public MouseEvent(){
-
     }
 
     public void setMouseEvent (){
@@ -76,6 +75,5 @@ public class MouseEvent {
     public void connection(JFrame jFrame){
         this.jFrame = jFrame;
     }
-
 
 }

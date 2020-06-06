@@ -18,6 +18,10 @@ public abstract class ActionEvent {
 
     }
 
+    public void pressComboBox(int index) throws Exception {
+
+    }
+
     /**
      * Method need to create generation of steps by person or automatic
      */

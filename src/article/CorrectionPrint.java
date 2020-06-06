@@ -54,6 +54,14 @@ public class CorrectionPrint {
         }
         System.out.println();
     }
+
+    public static void printArray(int[] x) {
+        for (int i = 0; i < x.length; i++) {
+            System.out.printf("%5d", x[i]);
+        }
+        System.out.println();
+    }
+
     public static void printArray(Object[] x) {
         for (int i = 0; i < x.length; i++) {
             if (Double.class.isInstance(x[i])) {

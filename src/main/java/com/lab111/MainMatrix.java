@@ -8,6 +8,9 @@ public class MainMatrix {
     public static void main(String[] args) {
         double[][] a = new double[][]{{1, 1, 1}, {10, 10, 1}, {-10, 10, 1}};
         double[][] b = new double[][]{{-1, -1, -1, -1}, {-1, -2, -4, -8}, {-1, -3, -9, -27}, {-1, -4, -16, -64}};
+
+        double[][] c = new double[][]{{0.7, 0}, {0.3, 0.7}};
+        double[][] d = new double[][]{{1, 0}, {0, 1}};
 /*
 
         int num = 200;
@@ -20,12 +23,21 @@ public class MainMatrix {
         }
 */
 
-        double[][] d = new double[][]{{1, 1, 1, 1, 1}, {1, 2, 2, 3, 4}, {2, 1, -2, 2, -3}, {3, 2, 3, 4, 1}, {-1, 1, -4, 4, 2}};
+//        double[][] d = new double[][]{{1, 1, 1, 1, 1}, {1, 2, 2, 3, 4}, {2, 1, -2, 2, -3}, {3, 2, 3, 4, 1}, {-1, 1, -4, 4, 2}};
 
 //        double[][] y = new double[][]{{2.18}, {0.13}, {2.32}};
 //        double[][] y = new double[][]{{8}, {10}, {4}};
         double[][] y = new double[][]{{1}, {1}, {1}};
         Matrix matrix = new Matrix();
+
+        double[][] aa = {
+                {1, 1, 2},
+                {3, 2, 1},
+                {4, 3, 3} };
+
+        System.out.println(matrix.determinant(aa));
+
+        CorrectionPrint.printArray(matrix.getTurnedMatrix(matrix.sum(d, matrix.multiplication(c, -1))));
 
 //        System.out.println(matrix.determinant(b));
 //

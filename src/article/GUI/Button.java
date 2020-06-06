@@ -63,4 +63,18 @@ public class Button extends JButton {
     public Color getColor() {
         return jButton.getBackground();
     }
+
+    @Override
+    public void setBounds(Rectangle r) {
+        super.setBounds(r);
+        if (jButton != null)
+            jButton.setBounds(r);
+    }
+
+    @Override
+    public Rectangle getBounds() {
+        if (jButton != null)
+            return jButton.getBounds();
+        return null;
+    }
 }

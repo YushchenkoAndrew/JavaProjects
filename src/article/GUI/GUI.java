@@ -107,7 +107,8 @@ public class GUI {
     // todo {"№", "X[i]", "Y[i]", "R(i - 1)", "H", "Z"};
 
     public Table[] tables = new Table[10];
-    public int indexTable = 0;
+    public JScrollPane[] scrollPane = new JScrollPane[10];
+    public int indexTable = -1;
 
     /**
      * Method create table
@@ -117,10 +118,10 @@ public class GUI {
      * @param columns   set columns name
      */
     public JScrollPane createTable(Rectangle rectangle, String[] columns, boolean flag) {
-        tables[indexTable] = new Table();
-        JScrollPane scrollPane = new JScrollPane(tables[indexTable].createTable(rectangle, columns, flag));
-        scrollPane.setBounds(rectangle);
-        return scrollPane;
+        tables[++indexTable] = new Table();
+        scrollPane[indexTable] = new JScrollPane(tables[indexTable].createTable(rectangle, columns, flag));
+        scrollPane[indexTable].setBounds(rectangle);
+        return scrollPane[indexTable];
     }
 
 
@@ -192,6 +193,14 @@ public class GUI {
     public boolean addInButtonGroup(Object o, int index) {
         buttonGroups[index].add((AbstractButton) o);
         return true;
+    }
+
+    ComboBox comboBox = new ComboBox();
+
+    public JComboBox createComboBox(Rectangle rectangle, boolean flag, String[] items){
+        comboBox.connection(action);
+        comboBox.createComboBox(rectangle, flag, items);
+        return comboBox.getComboBox();
     }
 
 
@@ -273,6 +282,10 @@ public class GUI {
         mouse.setMouseEvent();
     }
 
+    public void updateCursor(Cursor cursor) {
+        jFrame.setCursor(cursor);
+    }
+
 
     /**
      * Method create menuBar
@@ -284,4 +297,6 @@ public class GUI {
     public ActionEvent getAction() {
         return action;
     }
+
+
 }
