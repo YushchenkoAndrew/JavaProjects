@@ -1,0 +1,41 @@
+@startuml
+
+Project : name
+Project : icon
+Project : ID
+
+State : index
+State : name
+State : state
+State : finish
+
+Task : name
+Task : description
+
+Boss : profile
+Boss : deleteProject()
+Boss : addProject()
+Boss : addManager()
+
+Manager : profile
+Manager : createTask()
+Manager : addWorker()
+
+Worker : profile
+
+Profile : name
+Profile : photo
+Profile : email
+
+Project - State : 11        0*
+State - Task : 11        0*
+Task -- Worker : 0*\n\n\n\n 11
+Task -- Worker : 0*\n\n\n\n 11
+Project -- Boss : 0*\n\n\n\n 11
+Boss - Manager : 11        0*
+Manager - Worker : 11        0*
+
+Worker <|- Profile
+Manager <|-- Profile
+Boss <|-- Profile
+@enduml

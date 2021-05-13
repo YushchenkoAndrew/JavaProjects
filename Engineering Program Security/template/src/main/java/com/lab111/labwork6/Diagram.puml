@@ -1,0 +1,30 @@
+@startuml
+
+interface Strategy
+Strategy : drawDiagram();
+Strategy : repaint();
+Strategy : revalidate();
+
+PieChartsStrategy -|> Strategy
+Strategy <|- HistogramStrategy
+LineGraphsStrategy --|> Strategy
+
+
+PieChartsStrategy : drawDiagram()
+PieChartsStrategy : repaint()
+PieChartsStrategy : revalidate()
+
+
+LineGraphsStrategy : drawDiagram()
+LineGraphsStrategy : repaint()
+LineGraphsStrategy : revalidate()
+
+
+HistogramStrategy : drawDiagram()
+HistogramStrategy : repaint()
+HistogramStrategy : revalidate()
+
+Strategy <-- Action
+
+Action : drawDiagram()
+@enduml

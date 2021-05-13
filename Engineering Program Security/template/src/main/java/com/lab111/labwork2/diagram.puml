@@ -1,0 +1,39 @@
+@startuml
+interface If1
+interface If2
+interface If3
+
+If1 --|> If2
+If1 --|> If3
+
+
+Cl1 <|-- Cl3
+
+If3 o-- Cl2
+If2 o-- Cl3
+Cl3 o-- Cl1
+
+If1 : method1()
+If1 : method2()
+If1 : method3()
+
+If2 : method1()
+If2 : method2()
+If2 : method3()
+
+If3 : method1()
+If3 : method2()
+If3 : method3()
+
+Cl1 : method1()
+Cl1 : method2()
+Cl1 : method3()
+
+Cl2 : method1()
+Cl2 : method2()
+Cl2 : method3()
+
+Cl3 : method1()
+Cl3 : method2()
+Cl3 : method3()
+@enduml
