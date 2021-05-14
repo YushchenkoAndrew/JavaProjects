@@ -10,6 +10,8 @@
 hs_err_pid*
 apache*
 META-INF*
+launcher/
+*.exe
 
 ##############################
 ## Maven

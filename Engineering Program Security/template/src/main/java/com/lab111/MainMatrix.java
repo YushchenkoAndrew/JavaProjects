@@ -38,7 +38,7 @@ public class MainMatrix {
 //
 
         System.out.println(matrix.determinant(d));
-        System.out.println(matrix.determinantMethodGauss(d.clone(), 0));
+//        System.out.println(matrix.determinantMethodGauss(d.clone(), 0));
 
         CorrectionPrint.printArray(matrix.getTurnedMatrix(d));
         CorrectionPrint.printArray(matrix.multiplication(d, matrix.getTurnedMatrix(d)));
